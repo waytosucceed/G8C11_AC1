@@ -1,0 +1,224 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.30vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Comparative and Superlative Degree Adjective</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;font-size: 18x;"> 
+             
+
+
+
+
+
+                    
+
+
+                    We know that adjectives modify nouns. In the previous two classes we have seen that Adverbs modify verbs, adjectives and other adverbs.  Sometimes, we find it tricky to find out whether a word is used as an adjective or an adverb in a sentence.<br> <br> <span style="color: blueviolet;">  Today we will learn how to identify that. </span> <br>
+  
+                    ● In the past we had already studied comparative and superlative degree adjectives. Keeping that in mind, today we will also focus on the usage of Comparative and  Superlative degree adverbs. <br>
+
+                    ● The use of intensifiers and mitigators with Comparative and Superlative adjectives and adverbs respectively.  <br>
+
+                    ● We will also learn that Comparative and Superlative Adverbs can be formed by using the same rules as for Comparative and Superlative Adjective.
+                    
+          
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+                       
+        </div>    
+    
+                    
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg","Assets/14.jpg"];
+            var para=[ "<span style='background-color: blueviolet;color: white;'>Mia </span>: Hey Toby, run fast and get these items from the grocery store. The guests will arrive in an hour! <br><br>     <span style='background-color: blueviolet;color: white;'> Toby</span>:  Sure Miss. <br> <br>     <span style='background-color: blueviolet;color: white;'>Hudson</span>: Mia, why didn’t you ask Toby to take the bike? <br><br>     <span style='background-color: blueviolet;color: white;'>Mia </span>: Oh! I forgot Hudson. Don’t worry, the shop is nearby and Toby is a fast runner. He will be here in a few minutes.",
+                   
+                        "<span style='background-color: blueviolet;color: white;'>Hudson </span>: If I had not hurt my elbow so badly in the morning, I could have easily helped you a lot.<br> <br>     <span style='background-color: blueviolet;color: white;'>Mia</span>:It's okay Hudson. Sit in the  nearby chair. I am happy to cook in order to celebrate our son’s success with our near and dear ones.",
+
+                        "<img src='3th.jpg' style='width: 100%;' alt=''>",
+
+                        "In, “...the shop  <span style='color: blue;'> is </span>  <span style='color: blue;font-weight:bolder;font-style:italic;'>  nearby</span>..” “nearby” answers the questions “where?”, does the shop exist or “where?” is the shop located. It clearly gives us a reference of location. Here, “nearby” means close by, so, <u> <span style='color: blueviolet;'> “nearby” </span> is an adverb of place. </u><br> <br>In, “Sit in the   <span style='color: blue;font-weight:bolder;font-style:italic;'> nearby chair</span>”, “nearby” means “not far away” or “close”. It answers the question “what kind of chair?” in reference to its location.<u> Since, “nearby” here is  describing the  noun  <span style='color: blueviolet;'> “chair” </span> it is an adjective.</u><br> <br>Let us now continue with the conversation.",
+                    
+                        "<span style='background-color: blueviolet;color: white;'>Hudson</span>: To my surprise, you are quick this time! <br> <br><span style='background-color: blueviolet;color: white;'>Mia</span>: I had to finish the main courses as quickly as possible so that I am left with some time to complete the  half-prepared desserts.",
+
+                        "<span style='background-color: blueviolet;color: white;'>Nathan</span>: Hi mom, the kitchen smells so good! <br> <br><span style='background-color: blueviolet;color: white;'>Hudson</span>: Mother’s magic son! <br> <br> <span style='background-color: blueviolet;color: white;'>Nathan</span>: Mom, you cook the best, you are the best!",
+
+                        "Hudson tells Mia that she is “ <span style='color: blue;font-style:italic;'> quick this time.</span>” Here “quick” is describing Mia’s speed of cooking.<u> Since, “quick” is describing the noun “speed” it is an adjective.</u> <br><br>Mia tells us that she finished “the main courses as <span style='color: blue;font-style:italic;'> quickly as possible</span>….” Here, “quickly” is an adverb of manner answering the question “how?” Mia cooked the main courses. ",
+
+                        "<img src='8th.jpg' style='width: 100%;' alt=''>",
+
+                        "When superlative adverbs are  <span style='font-weight:bolder;font-style:italic;'> intensified</span>, the definite article <span style='font-weight:bolder;'> “the” </span> sits before them in a sentence: <br> <br> <u> Examples: </u> <br>1) Of the four sisters, Anabelle <span style='color:#cb6ce6;font-style:italic;'> easily</span> runs the fastest. <br>2) In Eastern India, Kolkatans are <span style='color:#cb6ce6;font-style:italic;'> by far</span> the warmest people. <br><br>  <span style='background-color:darkgreen;color:yellow;'> Intensifiers are adverbs or adverbial phrases that strengthen the meaning of other expressions like adjectives and adverbs  and help in showing  emphasis. </span>",
+
+                        " <span style='color:darkblue;font-style:italic;'> The guests have arrived: </span> <br><br> <span style='background-color: blueviolet;color: white;'>Nathan’s  uncle</span>:Nathan, well done! So your dream of becoming a pilot will turn into a reality now? <br><br> <span style='background-color: blueviolet;color: white;'>Nathan</span>: With everyone’s blessing uncle, yes Uncle. Where is Sean? <br><br>",
+
+                        "<span style='background-color: blueviolet;color: white;'>Nathan’s uncle</span>: Sean drove more speedily than his mom. I think he stopped somewhere to buy a cake to celebrate.  <br><br><span style='background-color: blueviolet;color: white;'>Nathan</span>: But you already bought one, and we have another one at home. What will do with the third one?",
+
+                        "Nathan’s uncle congratulates Nathan by saying  “ <span style='color: blue;font-style:italic;'>well done</span>”.<u> “Well” here, answers the question “how?” the action of working hard is carried out in order to get admission into a flying school to become a pilot. Thus, it is acting as an adverb of manner.</u><br> <br>When Nathan’s uncle says that his son, Sean “drove <span style='color: blue;font-style:italic;'> more speedily </span> than his mom’s.”  He is basically comparing how Sean and his mother drove. Thus, <span style='font-weight: bolder;font-style:italic;'> more speedily </span> is a comparative adverb of manner. ",
+
+                        " <span style='background-color:Aqua;'>Examples</span>: <br> <br>You <u> cook </u> <span style='color:#cb6ce6;font-style:italic;'> much better </span> than before.  <br>He <u> draws </u> <span style='color:#cb6ce6;font-style:italic;'> far worse </span> than anybody else in this office.  <br>Roger feels  <span style='color:#cb6ce6;font-style:italic;'>a lot </span><u> more confident </u> after the interview.",
+
+                        " <span style='background-color:Aqua;'>Examples</span>:<br> <br>Please <u> drive </u>  <span style='color:#cb6ce6;font-style:italic;'> a bit </span> more slowly. <br><u>Focus </u>  <span style='color:#cb6ce6;font-style:italic;'> a little </span> more attentively. <br>Please drive  <span style='color:#cb6ce6;font-style:italic;'> just a little bit  </span> <u>faster.</u> <br>Sara seems   <span style='color:#cb6ce6;font-style:italic;'>slightly </span> <u> stronger</u> than before.  <br><br> <span style='background-color:darkgreen;color:yellow;'>Mitigators are used in a sentence when it is required to make an adverb or an adjective less strong. They are the opposite of intensifiers. They can be adverbs, adverbials or adverb phrases.</span> ",
+
+                        "<span style='background-color: blueviolet;color: white;'>Nathan’s uncle</span>:  Most surprisingly, Sean doesn't know about your results and you don't know about his. He got into the same college as yours and you cousins are now going to study together, stay together and become pilots together! Sean thinks that today is just a simple weekend dinner invite to your house.<br><br><span style='background-color: blueviolet;color: white;'>Nathan</span>: What!!! Why didn't you tell me or any of us before?<br><br><span style='background-color: blueviolet;color: white;'>Nathan’s uncle</span>: Sean had checked his mailbox quite late at night and everyone else except you knows this. We wanted to surprise you both. ",
+
+                        "<span style='color:darkblue;font-style:italic;'>Sean enters:</span><br> <br><span style='background-color: blueviolet;color: white;'>Sean</span>: CONGRATULATIONS BROTHER!<br><br><span style='background-color: blueviolet;color: white;'>Nathan</span>: CONGRATULATIONS BROTHER!",
+
+                        "In this dialogue by Nathan’s uncle:<br> <br> <span style='color:blue;font-style:italic;'> “Most surprisingly, Sean doesn't know about your results and you don't know about his. He got into the same college as yours and you cousins are now going to study together, stay together and become pilots together! Sean thinks that today is just a simple weekend dinner invite to your house”,</span> <u> “most surprisingly” describes the two brothers’ not knowing about each other’s result simultaneously.</u> “Most surprisingly” is a superlative adverb of manner just like “most surprising” would be a superlative adjective.",
+
+                    ]
+            
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Double Surprise! : An Anecdote";
+                    document.getElementById("story").innerHTML = "<img src='lastpart.jpg' style='width: 100%;' alt=''> ";
+                   
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Double Surprise! : An Anecdote"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Comparative and Superlative Degree Adjective"
+                    document.getElementById("story").innerHTML = 'We know that adjectives modify nouns. In the previous two classes we have seen that Adverbs modify verbs, adjectives and other adverbs.Sometimes, we find it tricky to find out whether a word is used as an adjective or an adverb in a sentence.<br> <br> <span style="color: blueviolet;">  Today we will learn how to identify that. </span> <br>● In the past we had already studied comparative and superlative degree adjectives. Keeping that in mind, today we will also focus on the usage of Comparative and  Superlative degree adverbs. <br>● The use of intensifiers and mitigators with Comparative and Superlative adjectives and adverbs respectively.  <br>● We will also learn that Comparative and Superlative Adverbs can be formed by using the same rules as for Comparative and Superlative Adjective. ';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Double Surprise! : An Anecdote"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
